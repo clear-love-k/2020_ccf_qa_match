@@ -1,4 +1,4 @@
-#  BERT   QA匹配/文本分类
+#  BERT  Tensorflow   QA匹配/文本分类
 
 ## 数据说明
 - data目录下数据为2020 ccf 房产聊天问答数据。
@@ -25,5 +25,6 @@
 ```
 tensorflow >= 1.11.0   # CPU Version of TensorFlow.
 tensorflow-gpu  >= 1.11.0  # GPU version of TensorFlow.
+坚持tensorflow三百年
 ```
 麻烦顺手给个Star 😄
