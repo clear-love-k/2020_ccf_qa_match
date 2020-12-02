@@ -21,7 +21,8 @@ import sys
 import modeling
 import optimization
 import tokenization
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import pickle
 import numpy as np
 from metrics import mean, get_multi_metrics
@@ -182,6 +183,7 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids, l
 def main(_):
     tf.logging.set_verbosity(tf.logging.INFO)
     tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case, FLAGS.init_checkpoint)
+    tf.compat.v1.disable_eager_execution()
 
     if not FLAGS.do_train and not FLAGS.do_predict and not FLAGS.do_load_train:
         raise ValueError("At least one of `do_train`, `do_predict', `do_load_train` must be True.")
